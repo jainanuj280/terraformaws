@@ -1,10 +1,12 @@
-# variable "aws_access_key" {
-#   description = "Enter Access Key"
-# }
+# File to store global variables
 
-# variable "aws_secret_key" {
-#   description = "Enter Secret Key"
-# }
+variable "aws_access_key" {
+  description = "Enter Access Key"
+}
+
+variable "aws_secret_key" {
+  description = "Enter Secret Key"
+}
 
 variable "key_name" {
   description = "Enter Ssh Key Name"

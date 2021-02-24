@@ -1,3 +1,5 @@
+# Creating VPC, Subnets, Internet Gateway, Route Table, Security Groups
+
 resource "aws_vpc" "MyVpc" {
   cidr_block = var.vpc_cidr
   tags = {
@@ -34,7 +36,7 @@ resource "aws_route_table" "PublicRT" {
   }
 }
 
-resource "aws_route_table_association" "PublicRRt" {
+resource "aws_route_table_association" "AssociatePublicRt" {
   subnet_id = aws_subnet.PublicSubnet.id
   route_table_id = aws_route_table.PublicRT.id
 }
